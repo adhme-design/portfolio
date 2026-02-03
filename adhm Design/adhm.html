@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Adham Design</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+@import url('https://127.0.0.1:3000/adhm.portfoli.html');
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height:100vh;
+    background: linear-gradient(135deg, 
+    #3b0a45, #1a0d2e, #1a0b1f);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    color:white;
+    overflow-x:hidden;
+}
+
+@keyframes gradient {
+    0% {background-position:0% 50%;}
+    50% {background-position:100% 50%;}
+    100% {background-position:0% 50%;}
+}
+
+.hero {
+    text-align:center;
+    padding:100px 20px 60px;
+}
+
+.hero h1 {
+    font-size:3.5rem;
+    font-weight:800;
+}
+
+.hero p {
+    margin-top:15px;
+    font-size:1.2rem;
+    opacity:0.8;
+}
+
+.gallery {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap:25px;
+    padding:50px;
+}
+
+.card {
+    background: rgba(255,255,255,0.05);
+    border-radius:20px;
+    overflow:hidden;
+    backdrop-filter: blur(15px);
+    transition: 0.4s;
+    box-shadow:0 20px 40px rgba(0,0,0,0.4);
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+}
+
+.card img {
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.card p {
+    padding:15px;
+    text-align:center;
+    font-size:0.9rem;
+}
+
+.footer {
+    text-align:center;
+    padding:60px 20px;
+}
+
+.footer h2 {
+    margin-bottom:10px;
+}
+
+.footer span {
+    opacity:0.7;
+}
+
+.blur-circle {
+    position:fixed;
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    filter: blur(120px);
+    opacity:0.5;
+    z-index:-1;
+}
+
+.c1 {background:#ff005d; top:-100px; left:-100px;}
+.c2 {background:#9b00ff; bottom:-100px; right:-100px;}
+</style>
+</head>
+
+<body>
+
+<div class="blur-circle c1"></div>
+<div class="blur-circle c2"></div>
+
+<section class="hero">
+    <h1>Welcome</h1>
+    <p>I am a Graphic Designer - Adham Ibrahim Abdelmonsef</p>
+</section>
+
+<section class="gallery">
+    <div class="card">
+        <img src="بيتي44.jpg">
+        <p>Social media post design for a juice brand</p>
+    </div>
+    <div class="card">
+        <img src="بيتي33.jpg">
+        <p>Social media post design for a juice brand</p>
+    </div>
+    <div class="card">
+        <img src="1770061710708-019c1fe5-bdac-746f-91ab-0bb453d4ae1a.png">
+        <p>Social media post design for a al marai brand</p>
+    </div>
+    <div class="card">
+        <img src="1770061976222-019c1fe9-7efa-74f9-93eb-3f55eead0382.png">
+        <p>Social media post design for a molto brand</p>
+    </div>
+    <div class="card">
+        <img src="we1.jpg">
+        <p>Social media post design for a we brand</p>
+    </div>
+    <div class="card">
+        <img src="WE2.jpg">
+        <p>Social media post design for a we brand</p>
+    </div>
+    <div class="card">
+        <img src="adhm.jpg.jpg">
+        <p>Social media post design for a burger brand</p>
+    </div>
+    <div class="card">
+        <img src="دابل.jpg">
+        <p>Social media post design for a burger brand</p>
+    </div>
+</section>
+
+<section class="footer">
+    <h2>Thank you for watching</h2>
+    <span>Contact: 01114310990</span>
+</section>
+
+<script>
+// حركة بسيطة للماوس
+document.addEventListener("mousemove", e => {
+    document.querySelector(".c1").style.left = e.clientX * 0.02 + "px";
+    document.querySelector(".c2").style.top = e.clientY * 0.02 + "px";
+});
+</script>
+
+</body>
+</html>
